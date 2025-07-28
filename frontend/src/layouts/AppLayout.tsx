@@ -5,7 +5,26 @@ import React from 'react';
 
 const AppLayout: React.FC = () => {
     return <div className={styles.layout}>
-        <h1>Notes</h1>
+        <nav className={styles.menu}>
+            <Link to='/'>
+                <img src='/appicon.png' alt='My Saas prototype' className={styles.appicon}></img>
+            </Link>
+            <Link to='/app/notes'>
+                <Notebook/>Notes
+            </Link>
+            <Link to='/app/reports'>
+                <Activity />Reports
+            </Link>
+            <Link to='/app/users'>
+                <User />Users
+            </Link>
+        </nav>
+        <main>
+            <header className={styles.header}>
+                <Link to='/'>olegs@example.com</Link>
+            </header>
+            <Outlet />
+        </main>
     </div>
 };
 
