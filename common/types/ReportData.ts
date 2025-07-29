@@ -1,4 +1,4 @@
-export type ReportDta = {
+export type ReportData = {
     noteCount: number,
     mostNotableUser: string
 }
