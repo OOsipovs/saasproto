@@ -9,13 +9,13 @@ const AppLayout: React.FC = () => {
             <Link to='/'>
                 <img src='/appicon.png' alt='My Saas prototype' className={styles.appicon}></img>
             </Link>
-            <Link to='/app/notes'>
+            <Link to='/app/notes' className={styles.menuitem}>
                 <Notebook/>Notes
             </Link>
-            <Link to='/app/reports'>
+            <Link to='/app/reports' className={styles.menuitem}>
                 <Activity />Reports
             </Link>
-            <Link to='/app/users'>
+            <Link to='/app/users' className={styles.menuitem}>
                 <User />Users
             </Link>
         </nav>
