@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchUsersInTenant } from "../api";
 import styles from "./page.module.css";
+import UserTable from "../components/UserTable";
+import NewUserForm from "../components/NewUserForm";
 
 const UsersPage: React.FC = () => {
     const {data: users} = useQuery({
@@ -10,7 +12,8 @@ const UsersPage: React.FC = () => {
 
     return <div className={styles.page}>
         <h1>Users</h1>
-        <pre>{JSON.stringify(users)}</pre>
+        { users ? <UserTable users={users} /> : "Loading..."}
+        <NewUserForm />
     </div>
 };
 
